@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <title>Rozmowa</title>
+</head>
+<body>
+    <div class="topbar">
+        <h1>9obcy</h1>
+    </div>
+    <div class="convContainer">
+        <h2 id="convTitle">Rozmowa:</h2>
+        <div id="logs">
+            Czekamy na matcha...
+        </div>
+        <div id="bottomBar">
+            <button onclick="endConversation()" class="button">Rozłącz</button>
+            <textarea id="textarea" onkeydown="confirmSend()" placeholder=" "></textarea>
+            <button onclick="getCurrentMessage()" class="button">Wyślij</button>
+        </div>
+    </div>
+
+   
+    <script src="conv.js"></script>
+</body>
+</html>

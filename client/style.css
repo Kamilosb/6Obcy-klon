@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    font-size: 21px;
+    overflow-y: hidden;
+}
+.button {
+    min-width: 70px;
+    min-height: 70px;
+}
+.me {
+    color: #D1D1FF;
+}
+
+.stranger {
+    color: red;
+}
+#bottomBar {
+    visibility: hidden;
+    display: flex;
+    padding-top: 10px;
+}
+#reconnectButton {
+    border: none;
+    width: 190px;
+    height: 120px;
+    font-size: 24px;
+    color: white;
+    background-color: #141414;
+}
+.convContainer {
+    margin: 50px;
+    border: 1px white solid;
+    border-radius: 15px;
+    background-color: #272727;
+    padding: 20px;
+    height: 80vh;
+    max-height: 80vh;
+}
+#logs {
+    max-height: 82%;
+    height: 82%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+#textarea {
+    resize: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: #202020;
+    font-size: 21px;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline 1px;
+}
+
+.topbar {
+    /* text-align: center; */
+    padding-left: 25px;
+    border-bottom: 2px solid white;
+    /* min-height: 80px; */
+}

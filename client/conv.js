@@ -35,6 +35,10 @@ function getCurrentMessage() {
         alert('Przekroczyłeś limit znaków! (limit to 269)')
         return
     }
+    if(textarea.value.toString().includes("<") || textarea.value.toString().includes(">")) {
+        alert('Nie możesz użwać znaków: "<" i ">"')
+        return
+    }
     if(textarea.value == "" || textarea.value == " ") return
     addMessage(false, textarea.value.toString())
     sendMessage(textarea.value.toString())
@@ -56,9 +60,9 @@ function offBottomBar() {
 
 function addMessage(stranger, text) {
     if(!stranger) {
-        logs.innerHTML += `<span class="me">Ja: </span><span>${text}</span><br>`.toString()
+        logs.innerHTML += '<span class="me">Ja: </span><span>' + text + "</span><br>"
     } else {
-        logs.innerHTML += `<span class="stranger">Obcy: </span><span>${text}</span><br>`.toString()
+        logs.innerHTML += '<span class="stranger">Obcy: </span><span>' + text + "</span><br>"
     }
     logs.scrollTo(0, logs.scrollHeight);
 }

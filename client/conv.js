@@ -36,8 +36,8 @@ function getCurrentMessage() {
         return
     }
     if(textarea.value == "" || textarea.value == " ") return
-    addMessage(false, textarea.value)
-    sendMessage(textarea.value)
+    addMessage(false, textarea.value.toString())
+    sendMessage(textarea.value.toString())
     textarea.value = ""
 }
 
@@ -56,9 +56,9 @@ function offBottomBar() {
 
 function addMessage(stranger, text) {
     if(!stranger) {
-        logs.innerHTML += `<span class="me">Ja: </span><span>${text}</span><br>`
+        logs.innerHTML += `<span class="me">Ja: </span><span>${text}</span><br>`.toString()
     } else {
-        logs.innerHTML += `<span class="stranger">Obcy: </span><span>${text}</span><br>`
+        logs.innerHTML += `<span class="stranger">Obcy: </span><span>${text}</span><br>`.toString()
     }
     logs.scrollTo(0, logs.scrollHeight);
 }
